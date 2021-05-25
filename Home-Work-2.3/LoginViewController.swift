@@ -13,18 +13,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textPassword: UITextField!
-
+    
+// added values for information in WelcomeViewControler
     var nameSeve: String?
     var paswordSave: String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textName.delegate = self
         textPassword.delegate = self
         textFieldShouldReturn(textName)
         textFieldShouldReturn(textPassword)
-        // Do any additional setup after loading the view.
     }
     
+// realizatsiya button next and done in keybord
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.tag == 2 {
             textName.resignFirstResponder()
@@ -35,13 +38,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             textPassword.returnKeyType = .done
             
         }
-        return true // пока не понял
+        return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
     }
-    
+
+    // send information to WelcomeViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let dvc = segue.destination as? WelcomeViewController else {return}
         dvc.nameUser = textName.text
@@ -49,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    
+    // func to Forgot Name and Forgot Password, use information for WelcomeViewController
     private func alterVCName() {
         guard let nameSeve = nameSeve.self else { return }
         let alertVCMax = UIAlertController(title: "Ooops", message: "your name - \(nameSeve)", preferredStyle: .alert)
@@ -63,7 +67,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         present(alertVCMax, animated: true)
     }
     
-
+    // accept information for WelcomeViewController
+    
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
     
         textName.text = nil
