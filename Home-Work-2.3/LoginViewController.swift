@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textPassword: UITextField!
@@ -18,8 +18,14 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let dvc = segue.destination as? SecondViewController else {return}
+        guard let dvc = segue.destination as? WelcomeViewController else {return}
         dvc.nameUser = textName.text
+    }
+    
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+        textName.text = nil
+        textPassword.text = nil
+        
     }
 
     @IBAction func logInTap(_ sender: UIButton) {
