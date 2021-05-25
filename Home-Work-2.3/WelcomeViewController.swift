@@ -10,12 +10,14 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     var nameUser: String?
+    var passWordUser: String?
     
     @IBOutlet weak var LabelWelcom: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let nameUser = self.nameUser else { return }
+        guard let passWordUser = self.passWordUser else { return }
         
         LabelWelcom.text = "Welcome, \(nameUser)!"
 
