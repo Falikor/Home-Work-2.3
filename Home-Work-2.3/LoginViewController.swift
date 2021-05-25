@@ -14,7 +14,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textPassword: UITextField!
     
-// added values for information in WelcomeViewControler
+    @IBOutlet weak var logInButton: UIButton!
+    // added values for information in WelcomeViewControler
     var nameSeve: String?
     var paswordSave: String?
     
@@ -36,7 +37,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             textPassword.becomeFirstResponder()
             textPassword.enablesReturnKeyAutomatically = true
             textPassword.returnKeyType = .done
-            
         }
         return true
     }
@@ -94,10 +94,3 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
-/*
-extension UIViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return true
-    }
-}
-*/
