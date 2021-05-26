@@ -433,6 +433,18 @@
                                 <exclude reference="cMp-gk-XmC"/>
                                 <exclude reference="l6y-2a-MYb"/>
                                 <exclude reference="qbo-Cu-aA4"/>
+                                <exclude reference="8RJ-9M-IXE"/>
+                                <exclude reference="CWV-Id-7q2"/>
+                                <exclude reference="CaP-5m-iG3"/>
+                                <exclude reference="La6-yH-pFM"/>
+                                <exclude reference="Q4f-Fs-jvw"/>
+                                <exclude reference="QaS-KC-Nda"/>
+                                <exclude reference="Rj0-NL-vMa"/>
+                                <exclude reference="V0a-eV-thI"/>
+                                <exclude reference="Xeq-j9-Q9m"/>
+                                <exclude reference="mF0-qq-5W3"/>
+                                <exclude reference="oS9-ml-wc3"/>
+                                <exclude reference="z0T-Vo-IQJ"/>
                                 <exclude reference="6LM-VT-lHH"/>
                                 <exclude reference="Acu-3z-t6v"/>
                                 <exclude reference="F3B-M8-3jw"/>
@@ -446,18 +458,6 @@
                                 <exclude reference="rgU-Nu-xq7"/>
                                 <exclude reference="tEX-Fq-jR9"/>
                                 <exclude reference="yGs-jZ-NBA"/>
-                                <exclude reference="8RJ-9M-IXE"/>
-                                <exclude reference="CWV-Id-7q2"/>
-                                <exclude reference="CaP-5m-iG3"/>
-                                <exclude reference="La6-yH-pFM"/>
-                                <exclude reference="Q4f-Fs-jvw"/>
-                                <exclude reference="QaS-KC-Nda"/>
-                                <exclude reference="Rj0-NL-vMa"/>
-                                <exclude reference="V0a-eV-thI"/>
-                                <exclude reference="Xeq-j9-Q9m"/>
-                                <exclude reference="mF0-qq-5W3"/>
-                                <exclude reference="oS9-ml-wc3"/>
-                                <exclude reference="z0T-Vo-IQJ"/>
                                 <exclude reference="2k4-Wa-Lbz"/>
                                 <exclude reference="3cr-w5-Xh5"/>
                                 <exclude reference="511-3M-hdE"/>
@@ -489,12 +489,12 @@
                                 <include reference="pMs-Ip-YpE"/>
                                 <include reference="LdS-PJ-rKZ"/>
                                 <include reference="l6y-2a-MYb"/>
-                                <include reference="Acu-3z-t6v"/>
-                                <include reference="F3B-M8-3jw"/>
                                 <exclude reference="CaP-5m-iG3"/>
                                 <include reference="Q4f-Fs-jvw"/>
                                 <include reference="Rj0-NL-vMa"/>
                                 <include reference="Xeq-j9-Q9m"/>
+                                <include reference="Acu-3z-t6v"/>
+                                <include reference="F3B-M8-3jw"/>
                                 <include reference="2k4-Wa-Lbz"/>
                                 <include reference="3cr-w5-Xh5"/>
                                 <include reference="Nhz-Ce-WpV"/>
@@ -515,12 +515,12 @@
                                 <include reference="nvk-4C-0jI"/>
                                 <include reference="MZj-9h-RkV"/>
                                 <include reference="ZfX-UG-yOp"/>
-                                <include reference="Hjk-2T-IUB"/>
-                                <exclude reference="X1K-m4-pWm"/>
-                                <include reference="cak-3h-JCX"/>
                                 <include reference="8RJ-9M-IXE"/>
                                 <include reference="La6-yH-pFM"/>
                                 <include reference="oS9-ml-wc3"/>
+                                <include reference="Hjk-2T-IUB"/>
+                                <exclude reference="X1K-m4-pWm"/>
+                                <include reference="cak-3h-JCX"/>
                                 <exclude reference="6yO-dD-Snk"/>
                                 <include reference="Ke6-ZM-73p"/>
                                 <include reference="Nbl-Xf-CfB"/>
@@ -555,13 +555,13 @@
                                 <exclude reference="XJN-l4-piI"/>
                                 <exclude reference="cHO-CE-eQQ"/>
                                 <exclude reference="cMp-gk-XmC"/>
+                                <include reference="CWV-Id-7q2"/>
+                                <include reference="QaS-KC-Nda"/>
+                                <exclude reference="z0T-Vo-IQJ"/>
                                 <include reference="6LM-VT-lHH"/>
                                 <include reference="hrg-n3-p0q"/>
                                 <exclude reference="rgU-Nu-xq7"/>
                                 <include reference="yGs-jZ-NBA"/>
-                                <include reference="CWV-Id-7q2"/>
-                                <include reference="QaS-KC-Nda"/>
-                                <exclude reference="z0T-Vo-IQJ"/>
                                 <include reference="7M1-Wp-FJ0"/>
                                 <include reference="X3v-DO-Sao"/>
                                 <include reference="qG8-A0-2jc"/>
@@ -582,12 +582,12 @@
                                 <include reference="xDh-sW-yfi"/>
                                 <include reference="Xh2-SH-mwh"/>
                                 <include reference="qbo-Cu-aA4"/>
+                                <include reference="V0a-eV-thI"/>
+                                <include reference="mF0-qq-5W3"/>
                                 <include reference="FNr-V1-CZa"/>
                                 <include reference="WmM-Gp-NSa"/>
                                 <include reference="c7b-D7-Er6"/>
                                 <exclude reference="tEX-Fq-jR9"/>
-                                <include reference="V0a-eV-thI"/>
-                                <include reference="mF0-qq-5W3"/>
                                 <include reference="511-3M-hdE"/>
                                 <include reference="a6p-Dv-YEG"/>
                                 <include reference="cJ5-bM-3Kr"/>
@@ -653,24 +653,34 @@
                                 <rect key="frame" x="37" y="549" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Roscosmos News" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCM-Cj-puu">
-                                <rect key="frame" x="145" y="585" width="207" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nasa-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="zvd-p5-zVn">
                                 <rect key="frame" x="37" y="657" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NASA News" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8T-NR-PEf">
-                                <rect key="frame" x="145" y="693" width="207" height="28"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-ea-nzs">
+                                <rect key="frame" x="160" y="578" width="192" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Roscosmos News">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="roscosmosNews:" destination="xsE-KC-36J" eventType="touchUpInside" id="Klj-hz-vZb"/>
+                                    <segue destination="5Un-1D-p9v" kind="show" id="kvg-uL-qZt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-JO-m6n">
+                                <rect key="frame" x="160" y="686" width="132" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="NASA News">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="NASANews:" destination="xsE-KC-36J" eventType="touchUpInside" id="eQb-AF-i8E"/>
+                                    <segue destination="5Un-1D-p9v" kind="show" id="H9B-aJ-Idx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bqM-Wc-YHM"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -686,12 +696,48 @@
             </objects>
             <point key="canvasLocation" x="788.40579710144937" y="72.991071428571431"/>
         </scene>
+        <!--News View Controller-->
+        <scene sceneID="zfm-vl-5hc">
+            <objects>
+                <viewController id="5Un-1D-p9v" customClass="NewsViewController" customModule="Home_Work_2_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ugi-xL-Hmv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlj-qa-mZl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vv1-ZO-juM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o51-3K-e9a"/>
+                    <connections>
+                        <outlet property="viewWeb" destination="Zlj-qa-mZl" id="9TT-eH-MbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev8-jH-my2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621.7391304347827" y="72.991071428571431"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="H9B-aJ-Idx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="1024" width="512" height="512"/>
         <image name="interkosmos" width="500" height="500"/>
         <image name="nasa-removebg-preview" width="320" height="320"/>
         <image name="rus-removebg-preview" width="500" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

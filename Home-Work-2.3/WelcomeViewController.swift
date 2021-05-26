@@ -15,6 +15,8 @@ class WelcomeViewController: UIViewController {
     var nameUser: String?
     var passWordUser: String?
     
+    var numberButtonType: Int?
+    
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var LabelWelcom: UILabel!
     
@@ -63,8 +65,24 @@ class WelcomeViewController: UIViewController {
         let minutesLeft = CompetitionDayDifference.minute
         countDownLabel.text = "Start mission: \(daysLeft ?? 0) Days, \(hoursLeft ?? 0) Hours, \(minutesLeft ?? 0) Minutes"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let dvc = segue.destination as? NewsViewController else {return}
+        dvc.numberOfButton = numberButtonType
+    }
+
+
 
     @IBAction func LogOutTap(_ sender: UIButton) {
     }
+    
+    @IBAction func roscosmosNews(_ sender: UIButton) {
+        numberButtonType = sender.tag
+        
+    }
+    
+    @IBAction func NASANews(_ sender: UIButton) {
+        numberButtonType = sender.tag
 
+    }
 }
