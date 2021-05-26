@@ -16,8 +16,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mistakeLabel: UILabel!
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textPassword: UITextField!
-    
     @IBOutlet weak var logInButton: UIButton!
+    
     // added values for information in WelcomeViewControler
     var nameSeve: String?
     var paswordSave: String?
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-// realizatsiya button next and done in keybord
+    // realizatsiya button next and done in keybord
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.tag == 2 {
             textName.resignFirstResponder()
@@ -70,7 +70,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
+    // func validation password and name
     private func checkValidation(text: String) {
         guard text.count >= minLength else {
             mistakeLabel.text = ""
@@ -100,7 +100,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
         
 
-    
+    // func for keyord end when touches screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
             view.endEditing(true)
@@ -116,7 +116,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    // func to Forgot Name and Forgot Password, use information for WelcomeViewController
+    // func to Forgot Name and Forgot Password, use information for WelcomeViewController. func mistake validation
     private func alterVCName() {
         guard let nameSeve = nameSeve.self else { return }
         let alertVCMax = UIAlertController(title: "Ooops", message: "your name - \(nameSeve)", preferredStyle: .alert)
@@ -162,7 +162,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
-
+// check string incorrect
 extension String {
     func matches(_ regex: String) -> Bool {
         return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil

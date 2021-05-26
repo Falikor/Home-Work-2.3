@@ -40,7 +40,7 @@ class WelcomeViewController: UIViewController {
         
         tameToDay() 
     }
-    
+    // func counts time to start space mission
     func tameToDay() {
         // here we set the current date
         let date = NSDate()
@@ -66,10 +66,11 @@ class WelcomeViewController: UIViewController {
         let daysLeft = CompetitionDayDifference.day
         let hoursLeft = CompetitionDayDifference.hour
         let minutesLeft = CompetitionDayDifference.minute
+        
         //here we see in screen tame
-        countDownLabel.text = "Start mission: \(daysLeft ?? 0) Days, \(hoursLeft ?? 0) Hours, \(minutesLeft ?? 0) Minutes"
+        countDownLabel.text = "Start mission: \n \(daysLeft ?? 0) Days, \(hoursLeft ?? 0) Hours, \(minutesLeft ?? 0) Minutes"
     }
-    
+        // send tag button to new ViiewControler 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let dvc = segue.destination as? NewsViewController else {return}
         dvc.numberOfButton = numberButtonType

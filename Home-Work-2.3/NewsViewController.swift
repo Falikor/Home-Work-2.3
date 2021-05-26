@@ -12,7 +12,7 @@ class NewsViewController: UIViewController {
     
     var numberOfButton: Int?
     
-
+    // in dependence button show different web
     @IBOutlet weak var viewWeb: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,6 @@ class NewsViewController: UIViewController {
             let regist = URLRequest(url: url!)
             viewWeb.load(regist)
         }
-
-        // Do any additional setup after loading the view.
     }
 
 }
