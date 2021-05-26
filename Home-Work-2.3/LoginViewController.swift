@@ -11,6 +11,9 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var forgotUNButton: UIButton!
+    @IBOutlet weak var mistakeLabel: UILabel!
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textPassword: UITextField!
     
@@ -18,14 +21,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // added values for information in WelcomeViewControler
     var nameSeve: String?
     var paswordSave: String?
+    //limitations Password and Name
+    private let minLength = 3
+    private lazy var regex = "^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{\(minLength),}$"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textName.layer.cornerRadius = 10
+        textPassword.layer.cornerRadius = 10
+        logInButton.layer.cornerRadius = 10
+        forgotPasswordButton.layer.cornerRadius = 20
+        forgotUNButton.layer.cornerRadius = 20
+        
+        activLogInButton()
+        
         textName.delegate = self
         textPassword.delegate = self
         textFieldShouldReturn(textName)
         textFieldShouldReturn(textPassword)
+        
+        
+    }
+    // active or deactive button
+    func activLogInButton() {
+        guard let textN = textName.text?.isEmpty else {return}
+        guard let textP = textPassword.text?.isEmpty else {return}
+        if textN == false && textP == false {
+            logInButton.isEnabled = true
+            logInButton.sendActions(for: .touchUpInside)
+        } else {
+            logInButton.isEnabled = false
+        }
     }
     
 // realizatsiya button next and done in keybord
@@ -38,10 +66,45 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             textPassword.enablesReturnKeyAutomatically = true
             textPassword.returnKeyType = .done
         }
+        activLogInButton()
         return true
     }
     
+    
+    private func checkValidation(text: String) {
+        guard text.count >= minLength else {
+            mistakeLabel.text = ""
+            return
+        }
+        if text.matches(regex) {
+            mistakeLabel.textColor = .green
+            mistakeLabel.text = "Correct characters"
+        } else {
+            mistakeLabel.textColor = .red
+            mistakeLabel.text = "Invalid characters"
+            alterVCMistake()
+        }
+    }
+    func textField(_ textFild: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let text = (textFild.text ?? "") + string
+        let res: String
+        if range.length == 1 {
+            let end = text.index(text.startIndex, offsetBy: text.count - 1)
+            res = String(text[text.startIndex..<end])
+        } else {
+            res = text
+        }
+        checkValidation(text: res)
+        textFild.text = res
+        return false
+    }
+        
+
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (touches.first) != nil {
+            view.endEditing(true)
+        }
         super .touchesBegan(touches, with: event)
     }
 
@@ -66,23 +129,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         alertVCMax.addAction(UIAlertAction(title: "Thanks", style: .default))
         present(alertVCMax, animated: true)
     }
+    private func alterVCMistake() {
+        let alertVCMax = UIAlertController(title: "Mistake", message: "TIncorrect characters used in password or name", preferredStyle: .alert)
+        alertVCMax.addAction(UIAlertAction(title: "Thanks", style: .default))
+        present(alertVCMax, animated: true)
+    }
     
     // accept information for WelcomeViewController
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
-    
+        //delite all text and deactivate button
         textName.text = nil
         textPassword.text = nil
+        activLogInButton()
 
         guard let svc = segue.source as? WelcomeViewController else {return}
         nameSeve = svc.nameUser
         paswordSave = svc.passWordUser
-        
-
     }
+    
 
     @IBAction func logInTap(_ sender: UIButton) {
-        
+
     }
     
     @IBAction func ForgotUNTap(_ sender: UIButton) {
@@ -93,4 +161,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         alterVCPass()
     }
     
+}
+
+extension String {
+    func matches(_ regex: String) -> Bool {
+        return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
+    }
 }

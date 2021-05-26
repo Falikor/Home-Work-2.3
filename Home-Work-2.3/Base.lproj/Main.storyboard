@@ -250,6 +250,13 @@
                                     <action selector="ForgotUNTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xYE-w3-WsF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BI5-GW-uiF">
+                                <rect key="frame" x="30" y="119" width="354" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -597,14 +604,17 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="Fo2-4y-pZl" id="3kt-Rf-xOc"/>
+                        <outlet property="forgotUNButton" destination="qU5-ql-ijJ" id="Ou3-S6-xux"/>
                         <outlet property="logInButton" destination="DaF-s2-jRL" id="zQg-tL-n9w"/>
+                        <outlet property="mistakeLabel" destination="BI5-GW-uiF" id="22K-k0-TGe"/>
                         <outlet property="textName" destination="2C8-N6-HeZ" id="VQ4-wL-nL0"/>
                         <outlet property="textPassword" destination="pf4-lT-9ya" id="F3k-6L-gsJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.609375" y="65.885797950219612"/>
+            <point key="canvasLocation" x="23.188405797101453" y="65.625"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="63X-tS-UAk">
@@ -689,6 +699,7 @@
                     <connections>
                         <outlet property="LabelWelcom" destination="hfU-EC-gUZ" id="qdi-GV-Tlg"/>
                         <outlet property="countDownLabel" destination="a6e-E4-mN9" id="v3P-kA-yHx"/>
+                        <outlet property="logInButton" destination="shb-tL-qZK" id="CjE-Bv-gOL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZU-fQ-zjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -14,14 +14,18 @@ class WelcomeViewController: UIViewController {
     
     var nameUser: String?
     var passWordUser: String?
+    // tag button defolt 1 
+    var numberButtonType: Int? = 1
     
-    var numberButtonType: Int?
-    
+    @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var LabelWelcom: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logInButton.layer.cornerRadius = 10
+        
         // tow values from fest screen
         guard let nameUser = self.nameUser else { return }
         guard let passWordUser = self.passWordUser else { return }
@@ -44,7 +48,6 @@ class WelcomeViewController: UIViewController {
         let components = calendar.dateComponents([.hour, .minute, .month, .year, .day], from: date as Date)
 
         let currentDate = calendar.date(from: components)
-
         let userCalendar = Calendar.current
 
         // here we set the due date. When the timer is supposed to finish
@@ -57,12 +60,13 @@ class WelcomeViewController: UIViewController {
         let competitionDay = userCalendar.date(from: competitionDate as DateComponents)!
 
         //here we change the seconds to hours,minutes and days
-        let CompetitionDayDifference = calendar.dateComponents([.day, .hour, .minute], from: currentDate!, to: competitionDay)
+        let CompetitionDayDifference = calendar.dateComponents([.day, .hour, .minute, .second], from: currentDate!, to: competitionDay)
 
-        //finally, here we set the variable to our remaining time
+        //here we set the variable to our remaining time
         let daysLeft = CompetitionDayDifference.day
         let hoursLeft = CompetitionDayDifference.hour
         let minutesLeft = CompetitionDayDifference.minute
+        //here we see in screen tame
         countDownLabel.text = "Start mission: \(daysLeft ?? 0) Days, \(hoursLeft ?? 0) Hours, \(minutesLeft ?? 0) Minutes"
     }
     
@@ -78,11 +82,9 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func roscosmosNews(_ sender: UIButton) {
         numberButtonType = sender.tag
-        
     }
     
     @IBAction func NASANews(_ sender: UIButton) {
         numberButtonType = sender.tag
-
     }
 }
