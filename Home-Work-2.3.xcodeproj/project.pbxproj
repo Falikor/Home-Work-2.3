@@ -14,6 +14,7 @@
 		6C177C5F265CC764007B728F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C177C5E265CC764007B728F /* Assets.xcassets */; };
 		6C177C62265CC764007B728F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C177C60265CC764007B728F /* LaunchScreen.storyboard */; };
 		6C177C6C265CEDEB007B728F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C177C6B265CEDEB007B728F /* WelcomeViewController.swift */; };
+		6C2963A3265E28F900CC7445 /* kosmos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6C2963A2265E28F900CC7445 /* kosmos.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6C177C61265CC764007B728F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C177C63265CC764007B728F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C177C6B265CEDEB007B728F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6C2963A2265E28F900CC7445 /* kosmos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kosmos.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		6C177C49265CC75D007B728F = {
 			isa = PBXGroup;
 			children = (
+				6C2963A0265E272D00CC7445 /* music */,
 				6C177C54265CC75D007B728F /* Home-Work-2.3 */,
 				6C177C53265CC75D007B728F /* Products */,
 			);
@@ -68,6 +71,14 @@
 				6C177C63265CC764007B728F /* Info.plist */,
 			);
 			path = "Home-Work-2.3";
+			sourceTree = "<group>";
+		};
+		6C2963A0265E272D00CC7445 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				6C2963A2265E28F900CC7445 /* kosmos.mp3 */,
+			);
+			path = music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2963A3265E28F900CC7445 /* kosmos.mp3 in Resources */,
 				6C177C62265CC764007B728F /* LaunchScreen.storyboard in Resources */,
 				6C177C5F265CC764007B728F /* Assets.xcassets in Resources */,
 				6C177C5D265CC75D007B728F /* Main.storyboard in Resources */,

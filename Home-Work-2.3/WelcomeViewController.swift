@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class WelcomeViewController: UIViewController {
+    // music backgrund
+    var AudioPlayer = AVAudioPlayer()
     
     var nameUser: String?
     var passWordUser: String?
@@ -16,26 +19,21 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // tow values from fest screen
         guard let nameUser = self.nameUser else { return }
         guard let passWordUser = self.passWordUser else { return }
-        
         LabelWelcom.text = "Welcome, \(nameUser)!"
-
-        // Do any additional setup after loading the view.
+        
+        // added backgrund music
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "kosmos", ofType: "mp3")!)
+        AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+        AudioPlayer.prepareToPlay()
+        AudioPlayer.numberOfLoops = -1
+        AudioPlayer.play()
     }
     
 
     @IBAction func LogOutTap(_ sender: UIButton) {
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
