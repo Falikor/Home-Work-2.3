@@ -8,13 +8,22 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    @IBOutlet weak var labelNameUser: UILabel!
     
+    @IBOutlet weak var labelNameUser: UILabel!
+    @IBOutlet weak var textAboutUser: UITextView!
     let user = User.getUser()
+    
+    var nameAbout: String?
+    var passAbout: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelNameUser.text = user.person.fullName
+        guard let nameAbout = self.nameAbout else { return }
+        guard let passAbout = self.passAbout else { return }
+        
+        labelNameUser.text = "Information about: \(user.person.fullName)"
+        
+        textAboutUser.text = "Login: \(user.login)\n Password: \(user.password)\n Name: \(user.person.name)\n Midlname: \(user.person.midlname)\n Surname: \(user.person.surname)\n Age: \(user.person.age)\n Height: \(user.person.height)\n Weight: \(user.person.weight)"
         // Do any additional setup after loading the view.
     }
     

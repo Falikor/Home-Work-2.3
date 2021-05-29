@@ -1465,8 +1465,17 @@
                                     <segue destination="HlX-cA-naZ" kind="presentation" modalPresentationStyle="fullScreen" id="Z0X-U4-iwh"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-cz-rDN">
+                                <rect key="frame" x="20" y="211" width="374" height="347"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJg-a3-Q5M">
-                                <rect key="frame" x="109" y="204" width="261" height="38"/>
+                                <rect key="frame" x="63" y="84" width="275" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1479,6 +1488,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="0Lm-m6-u7d"/>
                     <connections>
                         <outlet property="labelNameUser" destination="eJg-a3-Q5M" id="Hca-PN-XRt"/>
+                        <outlet property="textAboutUser" destination="mDH-cz-rDN" id="ap7-Z1-nNY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaM-m8-rRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1635,6 +1645,9 @@
         <image name="interkosmos" width="500" height="500"/>
         <image name="nasa-removebg-preview" width="320" height="320"/>
         <image name="rus-removebg-preview" width="500" height="500"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
