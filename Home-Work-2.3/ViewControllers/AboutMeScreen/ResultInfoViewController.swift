@@ -1,21 +1,17 @@
 //
-//  AboutMeViewController.swift
+//  ResultInfoViewController.swift
 //  Home-Work-2.3
 //
-//  Created by Татьяна Татьяна on 28.05.2021.
+//  Created by Татьяна Татьяна on 29.05.2021.
 //
 
 import UIKit
 
-class AboutMeViewController: UIViewController {
+class ResultInfoViewController: UIViewController {
 
-    var nameAbout: String?
-    var passAbout: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let nameAbout = self.nameAbout else { return }
-        guard let passAbout = self.passAbout else { return }
+
         // Do any additional setup after loading the view.
     }
     

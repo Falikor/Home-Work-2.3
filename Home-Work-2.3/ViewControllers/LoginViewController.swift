@@ -121,28 +121,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 dvc.nameAbout = textName.text
                 dvc.passAbout = textPassword.text    }
     }
-    }
-/*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
-        let welcomeVC = WelcomeViewController.self
-        let navigationVC = UINavigationController.self
-        let viewControllers = [welcomeVC, navigationVC]
-            for viewController in viewControllers {
-                if let welcomeVC = viewController as? WelcomeViewController {
-                    welcomeVC.nameUser = textName.text
-                    welcomeVC.passWordUser = textPassword.text
-                } else if let navigationVC = viewController as? UINavigationController {
-            guard let dvc = segue.destination as? AboutMeViewController else {return}
-                    dvc.nameAbout = textName.text
-                    dvc.passAbout = textPassword.text     }
-        
-            }
-    }
-
-*/
+}
     
-
     
     // func to Forgot Name and Forgot Password, use information for WelcomeViewController. func mistake validation
     private func alterVCName() {

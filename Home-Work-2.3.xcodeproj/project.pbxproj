@@ -19,6 +19,10 @@
 		6CCE052826613D1300CDDC41 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE052726613D1300CDDC41 /* AboutMeViewController.swift */; };
 		6CCE052C2662359B00CDDC41 /* UITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE052B2662359B00CDDC41 /* UITabBarViewController.swift */; };
 		6CCE052F2662361D00CDDC41 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE052E2662361D00CDDC41 /* NavigationController.swift */; };
+		6CCE053B2662613C00CDDC41 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE053A2662613C00CDDC41 /* InfoViewController.swift */; };
+		6CCE05402662619200CDDC41 /* ResultInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE053F2662619200CDDC41 /* ResultInfoViewController.swift */; };
+		6CCE05432662651A00CDDC41 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE05422662651A00CDDC41 /* Question.swift */; };
+		6CCE05472662745A00CDDC41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE05462662745A00CDDC41 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		6CCE052726613D1300CDDC41 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		6CCE052B2662359B00CDDC41 /* UITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarViewController.swift; sourceTree = "<group>"; };
 		6CCE052E2662361D00CDDC41 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		6CCE053A2662613C00CDDC41 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		6CCE053F2662619200CDDC41 /* ResultInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInfoViewController.swift; sourceTree = "<group>"; };
+		6CCE05422662651A00CDDC41 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6CCE05462662745A00CDDC41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +77,10 @@
 		6C177C54265CC75D007B728F /* Home-Work-2.3 */ = {
 			isa = PBXGroup;
 			children = (
-				6C177C55265CC75D007B728F /* AppDelegate.swift */,
-				6C177C57265CC75D007B728F /* SceneDelegate.swift */,
-				6C177C59265CC75D007B728F /* LoginViewController.swift */,
-				6CCE052B2662359B00CDDC41 /* UITabBarViewController.swift */,
-				6C177C6B265CEDEB007B728F /* WelcomeViewController.swift */,
-				6CCE052E2662361D00CDDC41 /* NavigationController.swift */,
-				6C2963A5265E400600CC7445 /* NewsViewController.swift */,
-				6CCE052726613D1300CDDC41 /* AboutMeViewController.swift */,
-				6C177C5B265CC75D007B728F /* Main.storyboard */,
-				6C177C5E265CC764007B728F /* Assets.xcassets */,
-				6C177C60265CC764007B728F /* LaunchScreen.storyboard */,
-				6C177C63265CC764007B728F /* Info.plist */,
+				6CCE053326625F9900CDDC41 /* Stroryboards */,
+				6CCE053426625FB800CDDC41 /* Recources */,
+				6CCE053526625FCF00CDDC41 /* ViewControllers */,
+				6CCE053626625FF400CDDC41 /* Models */,
 			);
 			path = "Home-Work-2.3";
 			sourceTree = "<group>";
@@ -91,6 +91,66 @@
 				6C2963A2265E28F900CC7445 /* kosmos.mp3 */,
 			);
 			path = music;
+			sourceTree = "<group>";
+		};
+		6CCE053326625F9900CDDC41 /* Stroryboards */ = {
+			isa = PBXGroup;
+			children = (
+				6C177C5B265CC75D007B728F /* Main.storyboard */,
+				6C177C60265CC764007B728F /* LaunchScreen.storyboard */,
+			);
+			path = Stroryboards;
+			sourceTree = "<group>";
+		};
+		6CCE053426625FB800CDDC41 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				6C177C5E265CC764007B728F /* Assets.xcassets */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		6CCE053526625FCF00CDDC41 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C177C59265CC75D007B728F /* LoginViewController.swift */,
+				6CCE052B2662359B00CDDC41 /* UITabBarViewController.swift */,
+				6CCE05382662606F00CDDC41 /* WelcomeScreen */,
+				6CCE05392662608C00CDDC41 /* AboutMeScreen */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6CCE053626625FF400CDDC41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C177C55265CC75D007B728F /* AppDelegate.swift */,
+				6C177C57265CC75D007B728F /* SceneDelegate.swift */,
+				6C177C63265CC764007B728F /* Info.plist */,
+				6CCE05422662651A00CDDC41 /* Question.swift */,
+				6CCE05462662745A00CDDC41 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6CCE05382662606F00CDDC41 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6C177C6B265CEDEB007B728F /* WelcomeViewController.swift */,
+				6C2963A5265E400600CC7445 /* NewsViewController.swift */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		6CCE05392662608C00CDDC41 /* AboutMeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6CCE053A2662613C00CDDC41 /* InfoViewController.swift */,
+				6CCE052E2662361D00CDDC41 /* NavigationController.swift */,
+				6CCE052726613D1300CDDC41 /* AboutMeViewController.swift */,
+				6CCE053F2662619200CDDC41 /* ResultInfoViewController.swift */,
+			);
+			path = AboutMeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +228,14 @@
 				6CCE052F2662361D00CDDC41 /* NavigationController.swift in Sources */,
 				6C177C5A265CC75D007B728F /* LoginViewController.swift in Sources */,
 				6C177C56265CC75D007B728F /* AppDelegate.swift in Sources */,
+				6CCE053B2662613C00CDDC41 /* InfoViewController.swift in Sources */,
 				6C2963A6265E400600CC7445 /* NewsViewController.swift in Sources */,
 				6CCE052C2662359B00CDDC41 /* UITabBarViewController.swift in Sources */,
 				6CCE052826613D1300CDDC41 /* AboutMeViewController.swift in Sources */,
+				6CCE05472662745A00CDDC41 /* User.swift in Sources */,
 				6C177C58265CC75D007B728F /* SceneDelegate.swift in Sources */,
+				6CCE05432662651A00CDDC41 /* Question.swift in Sources */,
+				6CCE05402662619200CDDC41 /* ResultInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Home-Work-2.3/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Home-Work-2.3/Models/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Home-Work-2.3/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Home-Work-2.3/Models/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
