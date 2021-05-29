@@ -116,10 +116,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.nameUser = textName.text
                 welcomeVC.passWordUser = textPassword.text
-            } else if let navigationVC = viewController as? UINavigationController {
-        guard let dvc = segue.destination as? AboutMeViewController else {return}
-                dvc.nameAbout = textName.text
-                dvc.passAbout = textPassword.text    }
+            } else if let navigationVC = viewController as? InfoViewController {
+                navigationVC.nameAbout = textName.text
+                navigationVC.passAbout = textPassword.text    }
     }
 }
     

@@ -21,9 +21,9 @@ class InfoViewController: UIViewController {
         guard let nameAbout = self.nameAbout else { return }
         guard let passAbout = self.passAbout else { return }
         
-        labelNameUser.text = "Information about: \(user.person.fullName)"
+        labelNameUser.text = "Information about:\n\(user.person.fullName)"
         
-        textAboutUser.text = "Login: \(user.login)\n Password: \(user.password)\n Name: \(user.person.name)\n Midlname: \(user.person.midlname)\n Surname: \(user.person.surname)\n Age: \(user.person.age)\n Height: \(user.person.height)\n Weight: \(user.person.weight)"
+        textAboutUser.text = " Login: \(nameAbout)\n Password: \(passAbout)\n Name: \(user.person.name)\n Midlname: \(user.person.midlname)\n Surname: \(user.person.surname)\n Age: \(user.person.age)\n Height: \(user.person.height)\n Weight: \(user.person.weight)"
         // Do any additional setup after loading the view.
     }
     
