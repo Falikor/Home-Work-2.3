@@ -23,9 +23,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        logInButton.layer.cornerRadius = 10
-        
+        print(nameUser)
         // tow values from fest screen
         guard let nameUser = self.nameUser else { return }
         guard let passWordUser = self.passWordUser else { return }

@@ -107,14 +107,42 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         super .touchesBegan(touches, with: event)
     }
-
+ 
     // send information to WelcomeViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let dvc = segue.destination as? WelcomeViewController else {return}
-        dvc.nameUser = textName.text
-        dvc.passWordUser = textPassword.text
-
+        let tabBarController = segue.destination as! UITabBarViewController
+        guard let viewControllers = tabBarController.viewControllers else {return}
+    for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.nameUser = textName.text
+                welcomeVC.passWordUser = textPassword.text
+            } else if let navigationVC = viewController as? UINavigationController {
+        guard let dvc = segue.destination as? AboutMeViewController else {return}
+                dvc.nameAbout = textName.text
+                dvc.passAbout = textPassword.text    }
     }
+    }
+/*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as! UITabBarController
+        let welcomeVC = WelcomeViewController.self
+        let navigationVC = UINavigationController.self
+        let viewControllers = [welcomeVC, navigationVC]
+            for viewController in viewControllers {
+                if let welcomeVC = viewController as? WelcomeViewController {
+                    welcomeVC.nameUser = textName.text
+                    welcomeVC.passWordUser = textPassword.text
+                } else if let navigationVC = viewController as? UINavigationController {
+            guard let dvc = segue.destination as? AboutMeViewController else {return}
+                    dvc.nameAbout = textName.text
+                    dvc.passAbout = textPassword.text     }
+        
+            }
+    }
+
+*/
+    
+
     
     // func to Forgot Name and Forgot Password, use information for WelcomeViewController. func mistake validation
     private func alterVCName() {
@@ -168,3 +196,4 @@ extension String {
         return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
     }
 }
+
